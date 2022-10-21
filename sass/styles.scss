@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,600;0,700;1,200;1,400;1,500;1,600;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.conten_personaje{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background-color: gray;
+    border-radius: 6px;
+    .personajeStopRight{
+        position: relative;
+        top: 50%;
+        left: 50%;
+        width: 881px;
+        height: 639px;
+        background: url('../../assets/stop.png');
+        margin: auto;
+        animation: run 1s steps(15) infinite reverse;
+        transform: translate(-50%, -50%) scale(.3);
+    }
+    .personajeStopLeft{
+        position: relative;
+        top: 50%;
+        left: 50%;
+        width: 881px;
+        height: 639px;
+        background: url('../../assets/stop.png');
+        margin: auto;
+        animation: run 1s steps(15) infinite reverse;
+        transform: translate(-50%, -50%) rotateY(180deg) scale(.3);
+    }
+    .personajeRunRight{
+        position: relative;
+        top: 50%;
+        left: 50%;
+        width: 881px;
+        height: 639px;
+        background: url('../../assets/run.png');
+        margin: auto;
+        animation: run .8s steps(15) infinite reverse;
+        transform: translate(-50%, -50%) scale(.3);
+    }
+    .personajeRunLeft{
+        position: relative;
+        top: 50%;
+        left: 50%;
+        width: 881px;
+        height: 639px;
+        background: url('../../assets/run.png');
+        margin: auto;
+        animation: run .8s steps(15) infinite reverse;
+        transform: translate(-50%, -50%) rotateY(180deg) scale(.3);
+    }
+    .personajeJumpRight{
+        position: relative;
+        top: 50%;
+        left: 50%;
+        width: 881px;
+        height: 639px;
+        background: url('../../assets/jump.png');
+        margin: auto;
+        animation: jumpStop 1s steps(10) reverse;
+        transform: translate(-50%, -50%) scale(.3);
+    }
+    .personajeJumpLeft{
+        position: relative;
+        top: 50%;
+        left: 50%;
+        width: 881px;
+        height: 639px;
+        background: url('../../assets/jump.png');
+        margin: auto;
+        animation: jumpStop 1s steps(10) reverse;
+        transform: translate(-50%, -50%) rotateY(180deg) scale(.3);
+    }
+    .personajeFlyRight{
+        position: relative;
+        top: 50%;
+        left: 50%;
+        width: 881px;
+        height: 639px;
+        background: url('../../assets/fly.png');
+        margin: auto;
+        animation: run .8s steps(15) infinite reverse;
+        transform: translate(-50%, -50%) scale(.3);
+    }
+    .personajeFlyLeft{
+        position: relative;
+        top: 50%;
+        left: 50%;
+        width: 881px;
+        height: 639px;
+        background: url('../../assets/fly.png');
+        margin: auto;
+        animation: run .8s steps(15) infinite reverse;
+        transform: translate(-50%, -50%) rotateY(180deg) scale(.3);
+    }
+}
+
+
+@keyframes run {
+    0%{
+        background-position: 0px;
+    }
+    100%{
+        background-position: 13215px;
+    }
+}
+
+@keyframes jumpStop {
+    0%{
+        background-position: 0px;
+    }
+    100%{
+        background-position: 8810px;
+    }
+}
