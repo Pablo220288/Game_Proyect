@@ -1,5 +1,9 @@
 const personaje = document.getElementById('personaje')
 
+const suelo = document.getElementById('suelo')
+let valor = 0
+let valor2 = 0
+
 document.addEventListener("keyup", (event) => {
     if (event.key == "ArrowLeft"){
 
@@ -45,6 +49,9 @@ document.addEventListener("keydown", (event) => {
         personaje.classList.remove('personajeRunRight')
         personaje.classList.add('personajeRunLeft')
         
+        valor--
+
+        suelo.style.marginLeft = valor  * -10 + 'px';
 
     } else if (event.key == "ArrowUp"){
 
@@ -61,7 +68,9 @@ document.addEventListener("keydown", (event) => {
         personaje.classList.remove('personajeRunLeft')
         personaje.classList.add('personajeRunRight')
 
+        valor++
 
+        suelo.style.marginLeft = valor  * -10 + 'px';
 
     } else if (event.key == "ArrowDown"){
         console.log();("Down key");
@@ -80,3 +89,12 @@ document.addEventListener("keydown", (event) => {
     }
 
 });
+
+let velEcenario = 1280/3
+let gameVel = 1
+
+/* let desplazamiento = () => {
+    console.log(velEcenario * deltaTime * gameVel); 
+}
+desplazamiento() */
+console.log(deltaTime);
